@@ -1,7 +1,7 @@
 # self-hosted-runners
 Este script automatiza o dimensionamento de runners em EC2 na AWS, proporcionando escalabilidade para seus workflows do GitHub Actions.
 
-Configuração Inicial
+## Configuração Inicial
 
 1. Crie uma instância EC2 e configure o runner: Siga as instruções em https://docs.github.com/pt/actions/hosting-your-own-runners/managing-self-hosted-runners/adding-self-hosted-runners para configurar o runner na instância.
 2. Crie uma AMI: Após a configuração, crie uma AMI (Amazon Machine Image) a partir da instância.
@@ -13,7 +13,7 @@ Configuração Inicial
 - MIN_INSTANCES: Defina a quantidade mínima de instâncias.
 - MAX_INSTANCES: Defina a quantidade máxima de instâncias.
 
-Configuração do Webhook no GitHub
+## Configuração do Webhook no GitHub
 
 1. Acesse as configurações do repositório: No GitHub, vá até as configurações do repositório e clique em "Webhooks".
 2. Adicione um webhook: Clique em "Add webhook" e preencha os seguintes campos:
@@ -23,11 +23,11 @@ Configuração do Webhook no GitHub
 - SSL verification: Desative temporariamente.
 3. Selecione eventos: Em "Which events would you like to trigger this webhook", selecione "Let me select individual events" e marque apenas "Workflow jobs".
 
-Execução
+## Execução
 
 Execute a pipeline e o script se encarregará de dimensionar automaticamente os runners em EC2 conforme a demanda dos seus workflows.
 
-Observações
+## Observações
 
 Certifique-se de que a função Lambda tenha as permissões necessárias para criar e gerenciar instâncias EC2.
 Ative a verificação SSL assim que possível para garantir a segurança da comunicação entre o GitHub e a função Lambda.
