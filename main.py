@@ -8,7 +8,7 @@ from botocore.exceptions import ClientError
 ec2 = boto3.client('ec2')
 
 # Configurações do Webhook e Instâncias
-SECRET_KEY = "INFORME A SECRET"
+SECRET_KEY = "INFORME A SECRET" #Criar como variável da função lambda
 LAUNCH_TEMPLATE_ID = 'id-000000000000'  # Substitua pelo ID do seu Launch Template
 MIN_INSTANCES = 1  # Quantidade mínima de instâncias
 MAX_INSTANCES = 2  # Quantidade máxima de instâncias
