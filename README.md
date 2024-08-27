@@ -8,10 +8,10 @@ Configuração Inicial
 3. Crie um Launch Template: Utilize um Launch Template para provisionar as instâncias EC2 de forma consistente.
 4. Crie uma função Lambda: Crie uma função Lambda com Runtime Python 3.12 e habilite o Function URL com "Auth Type=None".
 5. Faça o deploy do código "main.py": Faça o deploy do código "main.py" na função Lambda, certificando-se de alterar os seguintes campos:
-SECRET_KEY: Defina uma chave secreta forte.
-LAUNCH_TEMPLATE_ID: Substitua pelo ID do seu Launch Template.
-MIN_INSTANCES: Defina a quantidade mínima de instâncias.
-MAX_INSTANCES: Defina a quantidade máxima de instâncias.
+- SECRET_KEY: Defina uma chave secreta forte.
+- LAUNCH_TEMPLATE_ID: Substitua pelo ID do seu Launch Template.
+- MIN_INSTANCES: Defina a quantidade mínima de instâncias.
+- MAX_INSTANCES: Defina a quantidade máxima de instâncias.
 
 Configuração do Webhook no GitHub
 
