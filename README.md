@@ -17,10 +17,10 @@ Configuração do Webhook no GitHub
 
 1. Acesse as configurações do repositório: No GitHub, vá até as configurações do repositório e clique em "Webhooks".
 2. Adicione um webhook: Clique em "Add webhook" e preencha os seguintes campos:
-Payload URL: Adicione o URL Endpoint da função Lambda.
-Content type: application/json
-Secret: Insira a mesma senha definida no código Python no parâmetro SECRET_KEY.
-SSL verification: Desative temporariamente.
+- Payload URL: Adicione o URL Endpoint da função Lambda.
+- Content type: application/json
+- Secret: Insira a mesma senha definida no código Python no parâmetro SECRET_KEY.
+- SSL verification: Desative temporariamente.
 3. Selecione eventos: Em "Which events would you like to trigger this webhook", selecione "Let me select individual events" e marque apenas "Workflow jobs".
 
 Execução
