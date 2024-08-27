@@ -8,19 +8,19 @@ Este script automatiza o dimensionamento de runners em EC2 na AWS, proporcionand
 3. Crie um Launch Template: Utilize um Launch Template para provisionar as instâncias EC2 de forma consistente.
 4. Crie uma função Lambda: Crie uma função Lambda com Runtime Python 3.12 e habilite o Function URL com "Auth Type=None".
 5. Faça o deploy do código "main.py": Faça o deploy do código "main.py" na função Lambda, certificando-se de alterar os seguintes campos:
-- SECRET_KEY: Defina uma chave secreta forte.
-- LAUNCH_TEMPLATE_ID: Substitua pelo ID do seu Launch Template.
-- MIN_INSTANCES: Defina a quantidade mínima de instâncias.
-- MAX_INSTANCES: Defina a quantidade máxima de instâncias.
+- **SECRET_KEY:** Defina uma chave secreta forte.
+- **LAUNCH_TEMPLATE_ID:** Substitua pelo ID do seu Launch Template.
+- **MIN_INSTANCES:** Defina a quantidade mínima de instâncias.
+- **MAX_INSTANCES:** Defina a quantidade máxima de instâncias.
 
 ## Configuração do Webhook no GitHub
 
 1. Acesse as configurações do repositório: No GitHub, vá até as configurações do repositório e clique em "Webhooks".
 2. Adicione um webhook: Clique em "Add webhook" e preencha os seguintes campos:
-- Payload URL: Adicione o URL Endpoint da função Lambda.
-- Content type: application/json
-- Secret: Insira a mesma senha definida no código Python no parâmetro SECRET_KEY.
-- SSL verification: Desative temporariamente.
+- **Payload URL:** Adicione o URL Endpoint da função Lambda.
+- **Content type:** application/json
+- **Secret:** Insira a mesma senha definida no código Python no parâmetro SECRET_KEY.
+- **SSL verification:** Desative temporariamente.
 3. Selecione eventos: Em "Which events would you like to trigger this webhook", selecione "Let me select individual events" e marque apenas "Workflow jobs".
 
 ## Execução
