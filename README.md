@@ -1,4 +1,4 @@
-# self-hosted-runners
+# Github self-hosted runners na AWS
 Este script automatiza o dimensionamento de runners em EC2 na AWS, proporcionando escalabilidade para seus workflows do GitHub Actions.
 
 ## Configuração Inicial
